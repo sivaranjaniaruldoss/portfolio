@@ -3,37 +3,239 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
   <title>Siva Ranjani | AI & Full-Stack Developer</title>
-  <link rel="stylesheet" href="style.css"/>
+
+  <!-- Google Font -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg: #0b0d10;
+      --card: #12151b;
+      --text: #e6e8eb;
+      --muted: #9aa0a6;
+      --accent: #6ae3ff;
+      --border: #1f2430;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Inter', sans-serif;
+    }
+
+    body {
+      background:
+        linear-gradient(
+          rgba(11, 13, 16, 0.88),
+          rgba(11, 13, 16, 0.88)
+        ),
+        url("assets/8779025.jpg"); /* ✅ BACKGROUND IMAGE */
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      color: var(--text);
+      line-height: 1.7;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: auto;
+      padding: 4rem 1.5rem;
+    }
+
+    /* HERO */
+    .hero-flex {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 3rem;
+      flex-wrap: wrap;
+      margin-bottom: 4rem;
+    }
+
+    .hero-text {
+      max-width: 620px;
+    }
+
+    h1 {
+      font-size: 2.8rem;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+    }
+
+    .subtitle {
+      color: var(--accent);
+      margin-bottom: 0.4rem;
+    }
+
+    .location {
+      color: var(--muted);
+      font-size: 0.9rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .bio {
+      margin-bottom: 2rem;
+    }
+
+    .actions {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      padding: 0.6rem 1.2rem;
+      border-radius: 6px;
+      border: 1px solid var(--border);
+      text-decoration: none;
+      color: var(--text);
+      font-size: 0.9rem;
+      transition: 0.2s;
+    }
+
+    .btn:hover {
+      border-color: var(--accent);
+      color: var(--accent);
+    }
+
+    .primary {
+      background: var(--accent);
+      color: #000;
+      border: none;
+    }
+
+    .primary:hover {
+      opacity: 0.85;
+    }
+
+    /* PROFILE IMAGE */
+    .profile-img {
+      width: 170px;
+      height: 170px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid var(--border);
+      box-shadow: 0 18px 45px rgba(0,0,0,0.65);
+    }
+
+    /* SECTIONS */
+    .section {
+      margin-top: 4rem;
+    }
+
+    .section h2 {
+      font-size: 1.6rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .skill-group {
+      margin-bottom: 1.5rem;
+    }
+
+    .skill-group h3 {
+      font-size: 1rem;
+      color: var(--muted);
+      margin-bottom: 0.6rem;
+    }
+
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem;
+    }
+
+    .tags span {
+      background: rgba(18, 21, 27, 0.75);
+      backdrop-filter: blur(10px);
+      border: 1px solid var(--border);
+      padding: 0.4rem 0.7rem;
+      border-radius: 6px;
+      font-size: 0.85rem;
+    }
+
+    .card {
+      background: rgba(18, 21, 27, 0.75);
+      backdrop-filter: blur(12px);
+      border: 1px solid var(--border);
+      padding: 1.4rem;
+      border-radius: 12px;
+      margin-bottom: 1.2rem;
+    }
+
+    .muted {
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    .list {
+      list-style: none;
+    }
+
+    .list li {
+      padding: 0.4rem 0;
+      color: var(--muted);
+    }
+
+    footer {
+      margin-top: 5rem;
+      text-align: center;
+      color: var(--muted);
+      font-size: 0.8rem;
+    }
+
+    /* MOBILE */
+    @media (max-width: 768px) {
+      .hero-flex {
+        flex-direction: column-reverse;
+        text-align: center;
+      }
+
+      .profile-img {
+        width: 140px;
+        height: 140px;
+      }
+    }
+  </style>
 </head>
+
 <body>
 
   <main class="container">
-    <img src="assets/mypic18.jpg" alt="Siva Ranjani" class="profile-img">
-
 
     <!-- HERO -->
-    <section class="hero">
-      <h1>Siva Ranjani S</h1>
-      <p class="subtitle">
-        AI & Full-Stack Developer · B.Tech AIML
-      </p>
-      <p class="location">
-        Trichy, Tamil Nadu, India
-      </p>
+    <section class="hero-flex">
 
-      <p class="bio">
-        I’m a B.Tech student specializing in Artificial Intelligence and Machine Learning, 
-        with hands-on experience in full-stack development, cloud platforms, and AI-driven projects. 
-        I enjoy building practical systems that actually solve problems — cleanly and at scale.
-      </p>
+      <div class="hero-text">
+        <h1>Siva Ranjani S</h1>
 
-      <div class="actions">
-        <a href="mailto:sivaranjaniaruldaus@gmail.com" class="btn primary">Email Me</a>
-        <a href="https://github.com/sivaranjaniaruldoss" class="btn">GitHub</a>
-        <a href="https://www.linkedin.com/in/sivaranjaniarul-s" class="btn">LinkedIn</a>
+        <p class="subtitle">
+          AI & Full-Stack Developer · B.Tech AIML
+        </p>
+
+        <p class="location">
+          Trichy, Tamil Nadu, India
+        </p>
+
+        <p class="bio">
+          I’m a B.Tech student specializing in Artificial Intelligence and Machine Learning,
+          with hands-on experience in full-stack development, cloud platforms, and AI-driven projects.
+          I enjoy building practical systems that actually solve problems — cleanly and at scale.
+        </p>
+
+        <div class="actions">
+          <a href="mailto:sivaranjaniaruldaus@gmail.com" class="btn primary">Email Me</a>
+          <a href="https://github.com/sivaranjaniaruldoss" class="btn">GitHub</a>
+          <a href="https://www.linkedin.com/in/sivaranjaniarul-s" class="btn">LinkedIn</a>
+        </div>
       </div>
+
+      <!-- ✅ PROFILE IMAGE -->
+      <img src="assets/mypic18.jpeg" alt="Siva Ranjani" class="profile-img">
+
     </section>
 
     <!-- SKILLS -->
@@ -78,8 +280,8 @@
       <div class="card">
         <h3>Multi-Cloud Weather Tracker</h3>
         <p>
-          Deployed a static weather application using Amazon S3 and Azure Blob Storage.
-          Automated infrastructure with Terraform, configured CloudFront CDN,
+          Deployed a static weather application using Amazon S3 and Azure Blob Storage,
+          automated infrastructure with Terraform, configured CloudFront CDN,
           and implemented HTTPS using AWS Certificate Manager.
         </p>
       </div>
@@ -87,24 +289,24 @@
       <div class="card">
         <h3>LPG Monitoring & Automation System</h3>
         <p>
-          IoT-based LPG safety system using gas sensors and microcontroller for real-time leak detection.
-          Automated valve shutoff using a servo motor with audio alerts for emergency response.
+          IoT-based LPG safety system using gas sensors and microcontroller
+          for real-time leak detection with automated valve shutoff.
         </p>
       </div>
 
       <div class="card">
         <h3>AI Fashion Outfit Generator (Virtual Try-On)</h3>
         <p>
-          Built an AI-driven virtual try-on system using computer vision techniques like
-          body segmentation, pose estimation, and garment warping for realistic fitting.
+          AI-driven virtual try-on system using body segmentation,
+          pose estimation, and garment warping.
         </p>
       </div>
 
       <div class="card">
         <h3>Task Management Application</h3>
         <p>
-          React-based task manager using Tailwind CSS, useState, localStorage,
-          and full CRUD functionality with responsive UI.
+          React-based task manager with Tailwind CSS, localStorage,
+          and full CRUD functionality.
         </p>
       </div>
     </section>
@@ -130,7 +332,7 @@
     </section>
 
     <footer>
-      <p>© 2026 Siva Ranjani. </p>
+      <p>© 2026 Siva Ranjani</p>
     </footer>
 
   </main>
